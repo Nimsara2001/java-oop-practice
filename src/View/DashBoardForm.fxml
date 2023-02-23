@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootDashBoard" prefHeight="474.0" prefWidth="773.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoardFormController">
+   <children>
+      <Label layoutX="46.0" layoutY="50.0" opacity="0.44" prefHeight="189.0" prefWidth="343.0" style="-fx-background-color: #9ae4c3; -fx-background-radius: 10;" />
+      <Label fx:id="lblAutoSetMatchedDriver" layoutX="179.0" layoutY="182.0" prefHeight="26.0" prefWidth="195.0" style="-fx-background-color: #ebfaf3; -fx-background-radius: 4;">
+         <effect>
+            <DropShadow color="#c4c4c4" height="8.89" radius="3.9375" width="8.86" />
+         </effect>
+      </Label>
+      <Label layoutX="436.0" layoutY="183.0" prefHeight="153.0" prefWidth="286.0" style="-fx-background-color: #B5EAEA; -fx-background-radius: 17;" />
+      <Label layoutX="46.0" layoutY="270.0" opacity="0.94" prefHeight="161.0" prefWidth="343.0" style="-fx-background-color: #75DAAD; -fx-background-radius: 10;" />
+      <Label layoutX="70.0" layoutY="66.0" prefHeight="35.0" prefWidth="99.0" text="Select Vehicle">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="120.0" prefHeight="35.0" prefWidth="92.0" text="Vehicle Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="178.0" prefHeight="35.0" prefWidth="44.0" text="Driver" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSelectVehicle" layoutX="179.0" layoutY="70.0" prefHeight="26.0" prefWidth="195.0" style="-fx-background-color: #ebfaf3; -fx-background-radius: 4;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow color="#c4c4c4d1" height="8.87" radius="3.932499999999999" width="8.86" />
+         </effect>
+      </ComboBox>
+      <Label layoutY="3.0" prefHeight="26.0" prefWidth="773.0" style="-fx-background-color: #747d8c;" text=" Parking System" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSelectDriver" layoutX="179.0" layoutY="182.0" prefHeight="26.0" prefWidth="195.0" style="-fx-background-color: #ebfaf3; -fx-background-radius: 4;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow color="#c4c4c4" height="8.87" radius="3.932499999999999" width="8.86" />
+         </effect>
+      </ComboBox>
+      <Label layoutX="101.0" layoutY="288.0" prefHeight="26.0" prefWidth="234.0" text="Your Parking Slot Number">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSlotNumber" layoutX="172.0" layoutY="305.0" prefHeight="120.0" prefWidth="92.0" textAlignment="CENTER">
+         <font>
+            <Font size="71.0" />
+         </font></Label>
+      <JFXButton fx:id="btnParkVehicle" buttonType="RAISED" layoutX="454.0" layoutY="201.0" onAction="#btnParkVehicleOnAction" prefHeight="50.0" prefWidth="253.0" style="-fx-background-color: #00cccc; -fx-background-radius: 10;" text="Park Vehicle">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnOnDeliveryShift" buttonType="RAISED" layoutX="454.0" layoutY="268.0" onAction="#btnOnDeliveryShiftOnAction" prefHeight="50.0" prefWidth="253.0" style="-fx-background-color: #00cccc; -fx-background-radius: 10;" text="On Delivery Shift">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnMgtLog" layoutX="436.0" layoutY="380.0" onAction="#btnMgtLogOnAction" prefHeight="50.0" prefWidth="286.0" style="-fx-background-color: #ffa366; -fx-background-radius: 10;" text="Management Log In">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblSelectedVehicleType" layoutX="179.0" layoutY="126.0" prefHeight="26.0" prefWidth="195.0" style="-fx-background-color: #ebfaf3; -fx-background-radius: 4;">
+         <effect>
+            <DropShadow color="#c4c4c4" height="8.89" radius="3.9375" width="8.86" />
+         </effect></Label>
+      <Label fx:id="timeLabel" layoutX="436.0" layoutY="51.0" prefHeight="61.0" prefWidth="286.0" style="-fx-background-color: #87A7B3; -fx-background-radius: 10;" textAlignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+      <Label fx:id="dateLabel" layoutX="436.0" layoutY="116.0" prefHeight="26.0" prefWidth="286.0" style="-fx-background-color: #78C4D4; -fx-background-radius: 7;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="rootAdminLogIn" layoutX="135.0" layoutY="98.0" prefHeight="299.0" prefWidth="503.0" style="-fx-background-color: E1F1DD; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow color="#909090" />
+         </effect>
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="207.0" layoutY="14.0" opacity="0.34">
+               <image>
+                  <Image url="@../MaleUser.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="125.0" opacity="0.8" text="User Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="178.0" opacity="0.8" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtMgtUserName" layoutX="171.0" layoutY="116.0" prefHeight="35.0" prefWidth="253.0" promptText="Enter User Name Here" style="-fx-background-color: F4F4F2; -fx-background-radius: 10; -fx-border-color: #4c913b; -fx-border-radius: 10;" />
+            <JFXButton fx:id="btnAdminLogIn" layoutX="283.0" layoutY="233.0" onAction="#btnAdminLogInOnAction" prefHeight="42.0" prefWidth="141.0" style="-fx-background-radius: 10; -fx-background-color: #9FE6A0;" text="Log In">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAdminCancel" layoutX="82.0" layoutY="233.0" onAction="#btnAdminCancelOnAction" prefHeight="42.0" prefWidth="141.0" style="-fx-background-radius: 10; -fx-background-color: EEC4C4;" text="Cancel">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <PasswordField fx:id="txtMgtPassword" layoutX="171.0" layoutY="170.0" prefHeight="35.0" prefWidth="253.0" promptText="Enter Password Here" style="-fx-background-color: F4F4F2; -fx-background-radius: 10; -fx-border-color: #4c913b; -fx-border-radius: 10;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="298.0" layoutY="456.0" opacity="0.6" text="SAMAN RICE DISTRIBUTORS" />
+      <Line endX="119.5" layoutX="171.0" layoutY="464.0" opacity="0.6" startX="-170.0" />
+      <Line endX="119.5" layoutX="653.0" layoutY="464.0" opacity="0.6" startX="-164.5" />
+   </children>
+</AnchorPane>
